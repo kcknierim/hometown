@@ -1,149 +1,118 @@
-/*
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-}
-*/
+*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+            color:  #a72800;
+            font-family: "Dancing Script", cursive, sans-serif;
+		}
+nav{
+			background-color: #f7c229;
+			width:100%;
+        }
+/*for header and footer, ul is sized and flex boxed to make the elements display properly*/
+		nav ul {
+			height:100px;
 
-html, body {
-    height: 100%;
-}
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			font-size: 20px;
+			list-style: none;
+            
+		}
 
-/*
-.fbg {
-    background-image: url(../images/Blue%20Oak%20Lake.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-}
-*/
-.mainbodycontainer {
-    background-image: url(../images/Blue%20Oak%20Lake.jpg);
-     margin: 0;
-     padding: 0;
-     
-    
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.navigation {
-  list-style: none;
-  margin: 0; 
-    background: #f7c229;
-  width: 100%;
-  display: flex;
-font-weight: bolder;
-    font-family: Fredoka;
-align-items: center;
-  flex-flow: row wrap;
-    
-  justify-content: flex-end;
-}
 
-.navigation li:first-child {
-  margin-right: auto;
-}
-
-.navigation li:nth-child(5) {
-  margin-right: 70px;
-}
-
-.navigation a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: #a72800 ;
-}
-
-.navigation a:hover {
+nav ul a:hover {
     font-size: 150%;
     background: darken;
-    border: 2px solid #a72800;
-    
+    color: #68910a;
 }
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  
-  .navigation a { 
-    text-align: center; 
-    padding: 10px;
-  }
-
 
 /*
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
+nav ul h1 a{
+    font-size: 150%;
+    background: darken;
+    color: #68910a;
+}
 */
 
-.mainbodycontainer{
-/*
-  margin: 0 auto;
-  overflow: auto;
-*/
-  background-color: rgb(250,250,250);
-  min-width: 100%;
-/*  padding: 80px 0;*/
-  background: url("../images/Blue%20Oak%20Lake.jpg") no-repeat center center fixed;
-  background-size: cover;
+
+		
+
+/*used to create seperation between the items in the footer*/
+		footer li {
+			margin:auto 20px;
+		}
+
+		.lake {
+			/*'calc' calculates  value.  Here, I'm calculating the height of the hero image by taking 100vh (100% of the viewport height) and subtracting 200px (100px for the height of the header and footer), meaning that it will always totally fill the space between them enough to cover the screen fully*/
+			height:calc(100vh - 200px);
+            
+
+			/*using a background image on this div instead of positioning an image tag*/
+			background-image: url(../images/Blue%20Oak%20Lake%2016-9.jpg);
+			background-size: cover;
+            
+			/*flexbox used to position text in center of container*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+/*            background-color: rgba(250,250,250,1.0);*/
+		}
+		/*you can use margins to tweak the position of the text inside a flexbox, it will move in the opposite direction of the margin, so margin-bottom moves this image up*/
+.lake h2 {
+			margin-bottom: 150px;
+            margin-left: 50px;
+			font-size: 80px;
+
+		}
+
+/*css style for home/index page*/
+.lake h2 a {
+    text-decoration: none;
+    color: #fff;
 }
 
 
-.footer {
-  background-color: #7c229;
-  width: 100%;
-  height:80px;
-  border: 1px solid #a72800;
-  left:0;
-  position: fixed;
-  bottom: 0;
+h4 {
+    font-size: 24px;
+    align-content: center;
+    align-items: center;
+    margin-left: 105px;
 }
 
 
+/*css for footer*/
 
+footer {
+			background-color: #f7c229;
+			width: 100%
+		}
 
+		footer ul {
+			height:100px;
 
-
-
+			display:flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+			list-style: none;
+		}
 
 .footer {
     font-family: 'ultra', Fredoka+One;
     color: #a72800;
     background: #f7c229;
 }
-a {
-    text-decoration: none;
-    color: #fff;
-}
-p > a:hover{
-    color: ##7c229;
-    text-decoration:  underline;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin:  1% 0 1% 0;
-}
 
-ul {
-    padding:0;
-    list-style: none;
-}
 .footer-social-icons {
     width: 350px;
     display:block;
     margin: 0 auto;
 }
-.social-icon {
+
+.footer-social-icons a{
     color: #fff;
 }
 ul.social-icons {
@@ -154,7 +123,7 @@ ul.social-icons {
     display: inline;
     height: 100px;
 }
-.social-icons a {
+footer social-icons a {
     color: #fff;
     text-decoration: none;
 }
@@ -162,7 +131,7 @@ ul.social-icons {
     padding:10px 14px;
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
 .fa-facebook:hover {
     background-color: #3d5b99;
@@ -171,7 +140,7 @@ ul.social-icons {
     padding:10px 12px;
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
 .fa-twitter:hover {
     background-color: #00aced;
@@ -180,7 +149,7 @@ ul.social-icons {
     padding:10px 14px;
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
 .fa-rss:hover {
     background-color: #eb8231;
@@ -190,7 +159,7 @@ ul.social-icons {
 
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
 .fa-youtube:hover {
     background-color: #e64a41;
@@ -199,7 +168,7 @@ ul.social-icons {
     padding:10px 14px;
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
 .fa-linkedin:hover {
     background-color: #0073a4;
@@ -208,8 +177,107 @@ ul.social-icons {
     padding:10px 9px;
 
     transition: .5s;
-    background-color: #322f30;
+    background-color: rgba(247,194,41,0.7);
 }
+
 .fa-google-plus:hover {
     background-color: #e25714;
 }
+
+/*css needed for history page */
+
+
+
+article {
+    height:calc(100vh - 200px);
+    max-width: 100%;
+    padding-top: 20px;
+    padding-left: 85px;
+    padding-right: 85px;
+    overflow-y: scroll;
+    text-align: center;
+    background:rgba(104,145,10,0.1);
+}
+
+
+article h1 {
+    font-size: 36px;
+    text-align: center
+}
+
+
+.subtitle {
+    padding: 25px;
+  text-align: center;
+    font-size: 26px;
+    padding-bottom: 35px;
+}
+
+
+history p {
+  text-align: center;
+}
+
+p {
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+
+/*gallery css*/
+
+table {
+   height:calc(100vh - 200px);
+    max-width: 100%;
+    display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+    text-align: center;
+    align-content: center;
+    
+    padding-left: 100px;
+    padding-top: 0px;
+    overflow-y: scroll;
+    text-align: center; background:rgba(104,145,10,0.1);
+    
+}
+
+td {
+    height: 100px;
+    column-span: 3;
+   padding-right: 50px;
+    align-content: center center;
+    
+    
+}
+
+
+td { transition: .2s transform; }
+td:hover { transform: scale(2.0); }
+/*
+td img a:hover{
+  transform: scale(2.7,2.7);
+  transition: .3s transform;
+}
+*/
+
+/*
+table {
+    width: 100%;
+}
+*/
+
+
+
+/*css events page*/
+
+blockquote {
+    font-size:16px; 
+    color: #a72800;
+    text-align: center;
+    border: solid 3px #a72800;
+    padding:18px 20px 1px 20px;
+    margin-left:15px; 
+    margin-right:15px;
+    margin-bottom:40px;
+    background:rgba(104, 145, 10, 0.3);
