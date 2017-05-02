@@ -94,7 +94,7 @@ align-items: center;
 		}
 		/*you can use margins to tweak the position of the text inside a flexbox, it will move in the opposite direction of the margin, so margin-bottom moves this image up*/
 .lake h2 {
-			margin-bottom: 150px;
+			margin-bottom: 100px;
             margin-left: 50px;
 			font-size: 80px;
 
